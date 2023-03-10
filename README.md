@@ -1,2 +1,2 @@
 The app can be visited at :
-www.startsoftware.dev
+www.startsoftware.dev/todo
