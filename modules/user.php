@@ -15,7 +15,7 @@ switch($vars['action']){
          if ($ret['status']==1){
             header("location: index.php?action=list"); 
          }else{
-            header("location: index.php?action=signup&error_message=".urlencode($vars['error']));
+            header("location: index.php?action=signup&error_message=".urlencode($ret['error']));
          }
          exit;
     }break;

@@ -4,7 +4,9 @@
         <div class="card-body">
             <p class="login-box-msg"><?php echo LANG_SIGNUP;?></p>
             <form action="index.php?action=do_signup" method="post">
-
+                
+                <?php if (isset($vars['error_message'])){ ?><b style="color:red;"><?php echo $vars['error_message'] ?></b> <?php } ?>
+                
                 <div class="input-group mb-3">
                     <input type="name" class="form-control" name="name" placeholder="<?php echo LANG_YOUR_NAME;?>">
                     <div class="input-group-append">
