@@ -2,10 +2,15 @@
 
 include("init.php");
 
-if (!isset($vars['action'])){
+if ($appuser==0 and !isset($vars['action'])){
+	$vars['action']='login';
+}elseif(is_array($appuser) and !isset($vars['action'])){
     $vars['action']='list';
 }
 
 include("modules/user.php");
-include("modules/todo.php");
+//Modules to be accessed only by logged users...
+if (is_array($appuser)){
+	include("modules/todo.php");
+}
 ?>

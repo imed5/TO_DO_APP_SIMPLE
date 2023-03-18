@@ -1,5 +1,19 @@
 <?php
 
+function user_get_logged_user(){
+    global $db,$appuser;
+    
+    $appuser=0;
+    if (isset($_COOKIE['app_email']) and strlen($_COOKIE['app_email'])>0){		
+		$items = $db->query("SELECT * FROM users WHERE LOWER(email) = ? and pass= ?",$_COOKIE['app_email'], $_COOKIE['app_pass'])->fetchAll();
+		if (count($items)>0){
+			$appuser=$items[0];	
+		}
+	}
+    return $appuser;
+    
+}
+    
 function user_process_login($vars){
     global $db;
 
