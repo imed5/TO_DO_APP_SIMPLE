@@ -3,7 +3,10 @@
 switch($vars['action']){
     
     case "signup":{
-        
+        include("view/header.php");
+        include("view/user/signup.php");
+        include("view/footer.php");
+        exit;
     }break;
     
     case "do_signup":{
