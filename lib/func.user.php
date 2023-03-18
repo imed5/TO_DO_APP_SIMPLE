@@ -37,7 +37,7 @@ function user_process_login($vars){
     //search for it in the database ?
 	$items = $db->query("SELECT * FROM users WHERE LOWER(email) = ? and pass= ?",$vars['email'], md5($vars['pass']))->fetchAll();
 	if (count($items)==0){
-	        $ret['error']="Incorrect Email or Password";
+	        $ret['error']=LANG_INCORRECT_EMAIL_PASSWORD;
 	        return $ret;
 	}
 	//For the sake of simplicity, log the user directly by setting their cookies..
@@ -58,7 +58,7 @@ function user_process_signup($vars){
 	$vars['email']=trim(strtolower($vars['email']));
 	
     if (strlen($ret['error'])==0 and strlen($vars['email'])==0) {
-        $ret['error']="You need to provide an email.";
+        $ret['error']=LANG_YOU_NEED_TO_PROVIDE_EMAIL;
         return $ret;
     }
     if (strlen($ret['error'])==0 and strlen($vars['name'])==0) {
