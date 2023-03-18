@@ -21,5 +21,5 @@ $dbname = 'u229483663_todo';
 $db = new db($dbhost, $dbuser, $dbpass, $dbname);
 
 $vars=get_input_vars();
-
+$appuser=user_get_logged_user();
 ?>
