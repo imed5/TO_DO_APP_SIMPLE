@@ -40,7 +40,10 @@ switch($vars['action']){
     }break;    
     
     case "logout":{
-        
+	    setcookie("app_email", "" , -1,"/");
+	    setcookie("app_pass", "", -1,"/");        
+	    header("location: index.php?action=login"); 
+	    exit;
     }break;    
     
 }
