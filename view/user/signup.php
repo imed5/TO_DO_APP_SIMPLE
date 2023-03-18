@@ -3,10 +3,10 @@
         <div class="card-header text-center"><?php echo LANG_APP_NAME;?></div>
         <div class="card-body">
             <p class="login-box-msg"><?php echo LANG_SIGNUP;?></p>
-            <form action="index.php?action=do_login" method="post">
+            <form action="index.php?action=do_signup" method="post">
 
                 <div class="input-group mb-3">
-                    <input type="name" class="form-control" placeholder="<?php echo LANG_YOUR_NAME;?>">
+                    <input type="name" class="form-control" name="name" placeholder="<?php echo LANG_YOUR_NAME;?>">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-user"></span>
@@ -16,7 +16,7 @@
 
 
                 <div class="input-group mb-3">
-                    <input type="email" class="form-control" placeholder="<?php echo LANG_EMAIL;?>">
+                    <input type="email" class="form-control"  name="email" placeholder="<?php echo LANG_EMAIL;?>">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-envelope"></span>
@@ -25,7 +25,7 @@
                 </div>
                 
                 <div class="input-group mb-3">
-                    <input type="password" class="form-control" placeholder="<?php echo LANG_PASSWORD;?>">
+                    <input type="password" class="form-control"  name="pass" placeholder="<?php echo LANG_PASSWORD;?>">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-lock"></span>
