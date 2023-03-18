@@ -21,7 +21,10 @@ switch($vars['action']){
     }break;
     
     case "login":{
-
+        include("view/header.php");
+        include("view/user/login.php");
+        include("view/footer.php");
+        exit;
     }break;    
 
     case "do_login":{
