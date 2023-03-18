@@ -4,6 +4,7 @@
         <div class="card-body">
             <p class="login-box-msg"><?php echo LANG_SIGN_IN_INSTRUCTION;?></p>
             <form action="index.php?action=do_login" method="post">
+                <?php if (isset($vars['error_message'])){ ?><b style="color:red;"><?php echo $vars['error_message'] ?></b> <?php } ?>
                 <div class="input-group mb-3">
                     <input type="email" class="form-control" name="email" placeholder="<?php echo LANG_EMAIL;?>">
                     <div class="input-group-append">
@@ -21,7 +22,7 @@
                     </div>
                 </div>
                 <div class="col-4">
-                	<button type="submit" class="btn btn-primary btn-block"><?php echo LANG_LOGIN;?></button>
+                	<button type="submit" class="btn btn-primary"><?php echo LANG_LOGIN;?></button>
                 </div>
             </form>
         </div>
